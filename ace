@@ -1,0 +1,44 @@
+#!/usr/bin/php
+<?php
+
+	define( 'RESET_COLOR'   , "\033[0m");
+	define( 'FILE_COLOR'    , "\033[1m");
+	define( 'SECTION_COLOR' , "\033[1;31m");
+	define( 'KEY_COLOR'     , "\033[1;32m");
+	define( 'VALUE_COLOR'   , "\033[33m");
+	define( 'COMMENT_COLOR' , "\033[35m");
+
+	// remove own script
+	array_shift( $argv );
+
+	// define( "MULTI_FILE", count($argv) > 1 );
+
+	foreach ( $argv as $file ) {
+
+		$lines = file( $file );
+
+		foreach ( $lines as $line ) {
+
+			$line = rtrim( $line, "\n" );
+
+			// line comment
+			$line = preg_replace( '/^\s*;(.*)$/m', ';' . COMMENT_COLOR . '$1' . RESET_COLOR, $line, -1, $count);
+
+			if ( $count == 0 ) {
+
+				// inline comment
+				$line = preg_replace( '/;(.*)$/', ';' . COMMENT_COLOR . '$1' . RESET_COLOR, $line);
+
+				// sections
+				$line = preg_replace( '/^\s*\[.*\]\s*$/', SECTION_COLOR . '$0' . RESET_COLOR, $line );
+
+				// keys
+				$line = preg_replace( '/(\w+)=/', KEY_COLOR . '$1' . RESET_COLOR . '=', $line );
+
+				// values
+				$line = preg_replace( '/=([^;$]+)/', '=' . VALUE_COLOR . '$1' . RESET_COLOR, $line );
+			}
+
+			echo $line . PHP_EOL;
+		}
+	}
