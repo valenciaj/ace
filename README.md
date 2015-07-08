@@ -10,8 +10,10 @@ A PHP script to colour asterisk configuration files.
 
 ## How to use
 Use on single file
+
     # ace /etc/asterisk/sip.conf
 
 Or use on multiple files
+
     # ace /etc/asterisk/*
 
