@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/php -f
 <?php
 
 	define( 'RESET_COLOR'   , "\033[0m");
