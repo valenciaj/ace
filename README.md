@@ -1,7 +1,7 @@
 # ace
 Asterisk Configuration Embellish
 
-A PHP script to colour asterisk configuration files.
+A simple PHP script to colour asterisk configuration files.
 
 ## Install
     # wget -O ace https://github.com/valenciaj/ace/raw/master/ace
@@ -17,3 +17,8 @@ Or use on multiple files
 
     # ace /etc/asterisk/*
 
+## TODO
+
+* Colour include directives
+* Handle include directives
+* Colour multiline comments
