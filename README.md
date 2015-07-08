@@ -19,6 +19,7 @@ Or use on multiple files
 
 ## TODO
 
+* Colour dialplan syntax
 * Colour include directives
 * Handle include directives
 * Colour multiline comments
