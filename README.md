@@ -3,7 +3,7 @@
 
 A simple PHP script to colour asterisk configuration files.
 
-## Install
+## How to install
     # wget -O ace https://github.com/valenciaj/ace/raw/master/ace
     # chmod o+x ace
     # mv ace /usr/local/sbin
