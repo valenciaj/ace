@@ -1,5 +1,5 @@
 # ace
-Asterisk Configuration Embellish
+### Asterisk Configuration Embellish
 
 A simple PHP script to colour asterisk configuration files.
 
