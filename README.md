@@ -9,8 +9,9 @@ A PHP script to colour asterisk configuration files.
     # mv ace /usr/local/sbin
 
 ## How to use
-    Use on single file
+Use on single file
     # ace /etc/asterisk/sip.conf
-    or use on multiple files
+
+Or use on multiple files
     # ace /etc/asterisk/*
 
