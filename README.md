@@ -1,7 +1,7 @@
 # ace
 ### Asterisk Configuration Embellish
 
-A simple PHP script to colour asterisk configuration files.
+A simple ~~PHP~~ Perl script to colour asterisk configuration files.
 
 ## How to install
     # wget -O ace https://github.com/valenciaj/ace/raw/master/ace
